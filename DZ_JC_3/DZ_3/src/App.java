@@ -1,4 +1,5 @@
 import java.time.LocalDate;
+import java.util.Arrays;
 
 
 public class App {
@@ -11,6 +12,9 @@ public class App {
         employees[0] = emp1;
         employees[1] = emp2;
         employees[2] = emp3;
+
+        //сортриуем по дате рождения используя Comparator
+        Arrays.sort(employees, Employee.birthDateComparator());
 
         System.out.println("Оклады до повышения:");
         for(Employee object : employees){
